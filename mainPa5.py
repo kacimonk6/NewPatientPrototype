@@ -7,7 +7,7 @@ from ThreeSpaceAPIStreamlit import *
 from time import sleep
 import csv
 import os
-import winsound
+#import winsound
 import re
 
 
@@ -153,16 +153,16 @@ if st.session_state['logged_in']:
             st.session_state.writer_0 = csv.writer(st.session_state.csvfile_0)
             st.session_state.writer_1 = csv.writer(st.session_state.csvfile_1)
 
-            winsound.Beep(400, 50)  # Beep at 400 Hz for 50 milliseconds
-            winsound.Beep(800, 70)  # Beep at 800 Hz for 70 milliseconds
+            #winsound.Beep(400, 50)  # Beep at 400 Hz for 50 milliseconds
+            #winsound.Beep(800, 70)  # Beep at 800 Hz for 70 milliseconds
 
             st.session_state.data_collection_active = True
             return iteration
 
         # Function to stop recording
         def stop_recording():
-            winsound.Beep(700, 50)  # Beep at 700 Hz for 50 milliseconds
-            winsound.Beep(300, 70)  # Beep at 300 Hz for 70 milliseconds
+            #winsound.Beep(700, 50)  # Beep at 700 Hz for 50 milliseconds
+            #winsound.Beep(300, 70)  # Beep at 300 Hz for 70 milliseconds
 
             if st.session_state.csvfile_0:
                 st.session_state.csvfile_0.close()
